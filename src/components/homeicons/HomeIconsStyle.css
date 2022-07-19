@@ -1,0 +1,318 @@
+.home-icons-container {
+  color: #fff;
+  width: 500px;
+  height: 500px;
+  /* border-radius: 100%; */
+  /* border: 1px solid white; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  animation: 60000ms linear 3s infinite rotate-all-icons;
+}
+
+@keyframes rotate-all-icons {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+@keyframes rotate-icons {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-60deg);
+  }
+}
+
+.home-icon-react {
+  position: absolute;
+  top: 0;
+  left: 250px;
+  transform: translate(-50%, -50%);
+  animation: 1s ease-in-out 1s rotate-icons, 1s ease-in 0s font-size-animation,
+    60000ms linear 3s infinite rotate-icons;
+}
+/* .home-icon-react:hover {
+  animation: none;
+} */
+
+.home-icon-django {
+  position: absolute;
+  top: 73.23px;
+  left: 426.23px;
+  transform: translate(-50%, -50%);
+  animation: 1s ease-in-out 1s rotate-icons,
+    1s ease-in 125ms font-size-animation,
+    60000ms linear 3s infinite rotate-icons;
+}
+
+/* .home-icon-django:hover {
+  animation: none;
+} */
+
+.home-icon-aws {
+  position: absolute;
+  top: 73.23px;
+  left: 73.23px;
+  transform: translate(-50%, -50%);
+  animation: 1s ease-in-out 2125ms rotate-icons,
+    1s ease-in 1125ms font-size-animation,
+    60000ms linear 3s infinite rotate-icons;
+}
+
+/* .home-icon-aws:hover {
+  animation: none;
+} */
+
+.home-icon-github {
+  position: absolute;
+  top: 250px;
+  left: 0;
+  transform: translate(-50%, -50%);
+  animation: 1s ease-in-out 2000ms rotate-icons,
+    1s ease-in 1000ms font-size-animation,
+    60000ms linear 3s infinite rotate-icons;
+}
+/* .home-icon-github:hover {
+  animation: none;
+} */
+
+.home-icon-python {
+  position: absolute;
+  top: 250px;
+  left: 500px;
+  transform: translate(-50%, -50%);
+  animation: 1s ease-in-out 1375ms rotate-icons,
+    1s ease-in 375ms font-size-animation,
+    60000ms linear 3s infinite rotate-icons;
+}
+
+/* .home-icon-python:hover {
+  animation: none;
+} */
+
+.home-icon-js {
+  position: absolute;
+  top: 500px;
+  left: 250px;
+  transform: translate(-50%, -50%);
+  animation: 1s ease-in-out 1625ms rotate-icons,
+    1s ease-in 625ms font-size-animation,
+    60000ms linear 3s infinite rotate-icons;
+}
+
+/* .home-icon-js:hover {
+  animation: none;
+} */
+
+.home-icon-photoshop {
+  position: absolute;
+  top: 426.77px;
+  left: 73.23px;
+  transform: translate(-50%, -50%);
+  animation: 1s ease-in-out 1875ms rotate-icons,
+    1s ease-in 875ms font-size-animation,
+    60000ms linear 3s infinite rotate-icons;
+}
+
+/* .home-icon-photoshop:hover {
+  animation: none;
+} */
+
+.home-icon-heroku {
+  position: absolute;
+  top: 426.23px;
+  left: 426.23px;
+  transform: translate(-50%, -50%);
+  animation: 1s ease-in-out 1500ms rotate-icons,
+    1s ease-in 500ms font-size-animation,
+    60000ms linear 3s infinite rotate-icons;
+}
+
+/* .home-icon-heroku:hover {
+  animation: none;
+} */
+
+.home-name-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, calc(-50% - 70px));
+  font-size: 100px;
+  color: white;
+}
+
+@keyframes rotate-icons {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes rotate-icons-infinite {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.home-name-first-letter {
+  display: none;
+}
+
+.home-name-first-letter-show {
+  display: inline;
+}
+
+@media screen and (max-width: 600px) {
+  .home-icons-container {
+    height: 300px;
+    width: 300px;
+    top: calc(50% - 48px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+  }
+
+  .home-icon-react {
+    position: absolute;
+    top: 0;
+    left: 150px;
+    transform: translate(-50%, -50%);
+    animation: 1s ease-in-out 1s rotate-icons, 1s ease-in 0s font-size-animation,
+      60000ms linear 3s infinite rotate-icons;
+  }
+  /* .home-icon-react:hover {
+    animation: none;
+  } */
+
+  .home-icon-django {
+    position: absolute;
+    top: 50px;
+    left: 250px;
+    transform: translate(-50%, -50%);
+    animation: 1s ease-in-out 1s rotate-icons, 1s ease-in 0s font-size-animation,
+      60000ms linear 3s infinite rotate-icons;
+  }
+  /* .home-icon-django:hover {
+    animation: none;
+  } */
+
+  .home-icon-aws {
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    transform: translate(-50%, -50%);
+    animation: 1s ease-in-out 1s rotate-icons, 1s ease-in 0s font-size-animation,
+      60000ms linear 3s infinite rotate-icons;
+  }
+  /* .home-icon-aws:hover {
+    animation: none;
+  } */
+
+  .home-icon-github {
+    position: absolute;
+    top: 150px;
+    left: 0;
+    transform: translate(-50%, -50%);
+    animation: 1s ease-in-out 1s rotate-icons, 1s ease-in 0s font-size-animation,
+      60000ms linear 3s infinite rotate-icons;
+  }
+  /* .home-icon-github:hover {
+    animation: none;
+  } */
+
+  .home-icon-photoshop {
+    position: absolute;
+    top: 250px;
+    left: 40px;
+    transform: translate(-50%, -50%);
+    animation: 1s ease-in-out 1s rotate-icons, 1s ease-in 0s font-size-animation,
+      60000ms linear 3s infinite rotate-icons;
+  }
+  /* .home-icon-photoshop:hover {
+    animation: none;
+  } */
+
+  .home-icon-js {
+    position: absolute;
+    top: 300px;
+    left: 150px;
+    transform: translate(-50%, -50%);
+    animation: 1s ease-in-out 1s rotate-icons, 1s ease-in 0s font-size-animation,
+      60000ms linear 3s infinite rotate-icons;
+  }
+  /* .home-icon-js:hover {
+    animation: none;
+  } */
+
+  .home-icon-python {
+    position: absolute;
+    top: 150px;
+    left: 300px;
+    transform: translate(-50%, -50%);
+    animation: 1s ease-in-out 1s rotate-icons, 1s ease-in 0s font-size-animation,
+      60000ms linear 3s infinite rotate-icons;
+  }
+  /* .home-icon-python:hover {
+    animation: none;
+  } */
+
+  .home-icon-heroku {
+    position: absolute;
+    top: 250px;
+    left: 250px;
+    transform: translate(-50%, -50%);
+    animation: 1s ease-in-out 1s rotate-icons, 1s ease-in 0s font-size-animation,
+      60000ms linear 3s infinite rotate-icons;
+  }
+  /* .home-icon-heroku:hover {
+    animation: none;
+  } */
+
+  .home-name-text {
+    position: absolute;
+    top: calc(50% - 48px);
+    left: 50%;
+    transform: translate(-50%, calc(-50% - 35px));
+    font-size: 50px;
+  }
+}
+
+.animate-font-size {
+  animation: 1s ease-in-out 0s infinite font-size-animation-text;
+}
+
+@keyframes font-size-animation {
+  0% {
+    font-size: 100%;
+  }
+  50% {
+    font-size: 2%;
+  }
+  100% {
+    font-size: 100%;
+  }
+}
+
+@keyframes font-size-animation-text {
+  0% {
+    font-size: 100%;
+  }
+  50% {
+    font-size: 85%;
+  }
+  100% {
+    font-size: 100%;
+  }
+}

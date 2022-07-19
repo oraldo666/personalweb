@@ -1,0 +1,154 @@
+.navbar-container {
+  position: absolute;
+  color: #fff;
+  font-size: 28px;
+  margin: 20px 0 20px 0;
+  width: 100%;
+  z-index: +5;
+}
+
+.nav-menu-icon {
+  font-size: 40px;
+  position: absolute;
+  right: 20px;
+  animate: 1s ease-in 0s 1 slideInFromRight;
+  transitive: right 1s;
+  decoration: none;
+  color: #fff;
+}
+.slide-from-right {
+  right: 60%;
+  transition: right 1s;
+}
+.slide-back-in {
+  right: 20px;
+  transition: right 1s;
+  transition-delay: 1250ms;
+}
+
+.nav-menu-home {
+  position: absolute;
+  text-decoration: none;
+  color: #fff;
+  right: -100px;
+  z-index: -5;
+  z-index: 1;
+}
+.slide-from-right-home {
+  right: 50%;
+  transition: right 1s;
+  transition-delay: 250ms;
+}
+.slide-back-in-home {
+  right: -100px;
+  transition: right 1s;
+  transition-delay: 1000ms;
+}
+
+.nav-menu-blog {
+  position: absolute;
+  text-decoration: none;
+  color: #fff;
+  right: -100px;
+  z-index: 1;
+}
+.slide-from-right-blog {
+  right: 40%;
+  transition: right 1s;
+  transition-delay: 500ms;
+}
+.slide-back-in-blog {
+  right: -100px;
+  transition: right 1s;
+  transition-delay: 750ms;
+}
+
+.nav-menu-about {
+  position: absolute;
+  text-decoration: none;
+  color: #fff;
+  right: -100px;
+  z-index: 1;
+}
+.slide-from-right-about {
+  right: 30%;
+  transition: right 1s;
+  transition-delay: 750ms;
+}
+.slide-back-in-about {
+  right: -100px;
+  transition: right 1s;
+  transition-delay: 500ms;
+}
+
+.nav-menu-projects {
+  position: absolute;
+  text-decoration: none;
+  color: #fff;
+  right: -100px;
+  z-index: 1;
+}
+.slide-from-right-projects {
+  right: 20%;
+  transition: right 1s;
+  transition-delay: 1000ms;
+}
+.slide-back-in-projects {
+  right: -100px;
+  transition: right 1s;
+  transition-delay: 250ms;
+}
+
+@media screen and (max-width: 1000px) {
+  .nav-menu-home {
+    top: 60px;
+  }
+  .slide-from-right-home {
+    right: 20%;
+  }
+
+  .nav-menu-blog {
+    top: 100px;
+  }
+  .slide-from-right-blog {
+    right: 20%;
+  }
+
+  .nav-menu-about {
+    top: 140px;
+  }
+  .slide-from-right-about {
+    right: 20%;
+  }
+
+  .nav-menu-projects {
+    top: 180px;
+  }
+  .slide-from-right-projects {
+    right: 20%;
+  }
+
+  .nav-link-sm-container {
+    position: absolute;
+    top: 40px;
+    right: -60%;
+    width: 60%;
+    height: 100vh;
+    background: radial-gradient(
+      closest-side,
+      rgba(71, 71, 71, 1) 0%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    z-index: 1;
+  }
+  .slide-from-right-container {
+    right: 0;
+    transition: right 1s;
+    transition-delay: 0ms;
+  }
+  .slide-back-in-container {
+    right: -60%;
+    transition: right 1s;
+    transition-delay: 1250ms;
+  }
+}

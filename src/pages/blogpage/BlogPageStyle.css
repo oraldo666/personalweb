@@ -1,0 +1,11 @@
+.blog-page-container {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+@media only screen and (max-width: 1000px) {
+  .blog-page-container {
+    height: 100%;
+  }
+}

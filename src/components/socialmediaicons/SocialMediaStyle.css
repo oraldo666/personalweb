@@ -1,0 +1,27 @@
+.social-media-icons-container {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-50%);
+  gap: 20px;
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  .social-media-icons-container {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    flex-direction: row;
+    transform: translate(-50%, -50%);
+    gap: 10px;
+    margin-left: 0;
+  }
+}
+
+.github-icon {
+  background-color: white;
+  border-radius: 100%;
+}
