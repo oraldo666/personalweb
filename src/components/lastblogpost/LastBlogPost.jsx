@@ -38,11 +38,15 @@ function LastBlogPost() {
       <div className="blog-title-description-container">
         <h1>{theLastBlog?.title}</h1>
 
-        <p className="blog-description">
-          {theLastBlog?.description.length > 800
-            ? theLastBlog?.description.substring(0, 800) + " ..."
-            : theLastBlog?.description}{" "}
-        </p>
+        <div
+          className="blog-description"
+          dangerouslySetInnerHTML={{
+            __html:
+              theLastBlog?.description.length > 800
+                ? theLastBlog?.description.substring(0, 800) + " ..."
+                : theLastBlog?.description,
+          }}
+        ></div>
         <h2
           onClick={() => goToSingleItemPage(theLastBlog?.id)}
           className="single-blog-navigate-button"

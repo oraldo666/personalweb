@@ -44,11 +44,15 @@ function BlogPosts() {
             </div>
             <div className="all-blogs-item-title-description">
               <h1>{item?.title}</h1>{" "}
-              <p className="all-blogs-item-description">
-                {item?.description.length > 400
-                  ? item?.description.substring(0, 400) + " ..."
-                  : item?.description}{" "}
-              </p>
+              <div
+                className="all-blogs-item-description"
+                dangerouslySetInnerHTML={{
+                  __html:
+                    item?.description.length > 400
+                      ? item?.description.substring(0, 400) + " ..."
+                      : item?.description,
+                }}
+              ></div>
               <h2
                 onClick={() => goToSingleItemPage(item?.id)}
                 className="all-blogs-single-blog-navigate-button"

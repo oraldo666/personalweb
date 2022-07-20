@@ -1,9 +1,16 @@
 import React from "react";
 import "./AboutPageStyle.css";
-import { Link } from "react-router-dom";
+
+import AboutIntro from "../../components/aboutpagecomponents/AboutIntro";
+import AboutPresantation from "../../components/aboutpagecomponents/AboutPresantation";
 
 function AboutPage() {
-  return <div className="about-page-container"></div>;
+  return (
+    <div className="about-page-container">
+      <AboutIntro />
+      <AboutPresantation />
+    </div>
+  );
 }
 
 export default AboutPage;

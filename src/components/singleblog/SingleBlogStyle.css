@@ -26,17 +26,25 @@
 
 .single-blog-content-container {
   width: 80%;
+  margin: 10vh auto;
+  text-align: center;
 }
 
 @media screen and (max-width: 1200px) {
   .single-blog-img {
     width: 50%;
   }
+  .single-blog-content-container {
+    width: 85%;
+  }
 }
 
 @media screen and (max-width: 1000px) {
   .single-blog-img {
     width: 70%;
+  }
+  .single-blog-content-container {
+    width: 90%;
   }
 }
 
