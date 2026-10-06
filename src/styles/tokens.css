@@ -1,0 +1,99 @@
+/* Design tokens. :root is the dark theme; [data-theme="light"] overrides. */
+:root {
+  color-scheme: dark;
+
+  --bg: #0b0b0e;
+  --bg-2: #101015;
+  --surface: #141419;
+  --surface-2: #1b1b22;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.16);
+  --text: #f2efe8;
+  --text-muted: #9c998f;
+  --text-faint: #6b6962;
+  --accent: #f2b544;
+  --accent-text: #f2b544;
+  --accent-ink: #1a1203;
+  --accent-2: #7c6cf6;
+  --accent-glow: rgba(242, 181, 68, 0.18);
+  --glass: rgba(20, 20, 25, 0.55);
+  --glass-strong: rgba(11, 11, 14, 0.82);
+  --shadow-lg: 0 30px 80px -30px rgba(0, 0, 0, 0.75);
+  --shadow-sm: 0 10px 30px -14px rgba(0, 0, 0, 0.6);
+  --grain-opacity: 0.05;
+  --blob-opacity: 0.42;
+  --portrait-filter: grayscale(0.15) contrast(1.04);
+
+  --font-display: "Fraunces Variable", "Iowan Old Style", Georgia, serif;
+  --font-sans: "Manrope Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono Variable", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --fs-display: clamp(3.75rem, 12.5vw, 11.5rem);
+  --fs-h1: clamp(2.75rem, 6.5vw, 5.5rem);
+  --fs-h2: clamp(2.125rem, 4.8vw, 3.9rem);
+  --fs-h3: clamp(1.375rem, 2vw, 1.75rem);
+  --fs-h4: 1.125rem;
+  --fs-lead: clamp(1.125rem, 1.4vw, 1.3125rem);
+  --fs-body: 1.0625rem;
+  --fs-small: 0.9375rem;
+  --fs-xs: 0.8125rem;
+  --fs-mono: 0.75rem;
+
+  --lh-tight: 0.98;
+  --lh-snug: 1.12;
+  --lh-body: 1.65;
+  --ls-mono: 0.14em;
+
+  --s-1: 0.25rem;
+  --s-2: 0.5rem;
+  --s-3: 0.75rem;
+  --s-4: 1rem;
+  --s-5: 1.5rem;
+  --s-6: 2rem;
+  --s-7: 3rem;
+  --s-8: 4rem;
+  --s-9: 6rem;
+  --s-10: 8rem;
+  --section-pad: clamp(5rem, 11vw, 9rem);
+  --container: 1240px;
+  --gutter: clamp(1rem, 4vw, 2.5rem);
+  --nav-h: 76px;
+
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 22px;
+  --r-xl: 32px;
+  --r-pill: 999px;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 160ms;
+  --dur: 320ms;
+  --dur-slow: 640ms;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+
+  --bg: #f6f2ea;
+  --bg-2: #f1ece2;
+  --surface: #fffdf9;
+  --surface-2: #efe9dd;
+  --line: rgba(18, 18, 20, 0.09);
+  --line-strong: rgba(18, 18, 20, 0.18);
+  --text: #121214;
+  --text-muted: #5f5c55;
+  --text-faint: #8c887f;
+  --accent: #d99c1f;
+  --accent-text: #8a5a00;
+  --accent-ink: #1a1203;
+  --accent-2: #5b4ae0;
+  --accent-glow: rgba(217, 156, 31, 0.22);
+  --glass: rgba(246, 242, 234, 0.6);
+  --glass-strong: rgba(246, 242, 234, 0.88);
+  --shadow-lg: 0 30px 80px -30px rgba(60, 45, 15, 0.3);
+  --shadow-sm: 0 10px 30px -14px rgba(60, 45, 15, 0.22);
+  --grain-opacity: 0.07;
+  --blob-opacity: 0.6;
+  --portrait-filter: grayscale(0.1) contrast(1.02);
+}

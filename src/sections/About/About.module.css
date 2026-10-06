@@ -1,0 +1,130 @@
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(2.5rem, 6vw, 6rem);
+  align-items: start;
+}
+
+.portrait-col {
+  position: sticky;
+  top: calc(var(--nav-h) + 2rem);
+}
+
+.portrait-scene {
+  position: relative;
+  perspective: 1200px;
+}
+
+.portrait-scene::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translate(18px, 18px);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-xl);
+  pointer-events: none;
+}
+
+.portrait {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  background: var(--surface-2);
+  box-shadow: var(--shadow-lg);
+  transform-style: preserve-3d;
+}
+
+.portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: var(--portrait-filter);
+  transition: transform 1.2s var(--ease-out);
+}
+
+.portrait:hover img {
+  transform: scale(1.04);
+}
+
+.portrait::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 58%, rgba(11, 11, 14, 0.6));
+  pointer-events: none;
+}
+
+.caption {
+  position: absolute;
+  left: 1.25rem;
+  bottom: 1.1rem;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #f2efe8;
+}
+
+.caption .mono {
+  color: inherit;
+}
+
+.caption-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 16px var(--accent);
+}
+
+.copy {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.paragraphs {
+  display: grid;
+  gap: 1.25rem;
+  max-width: 42rem;
+  color: var(--text-muted);
+}
+
+.lead-paragraph {
+  font-size: var(--fs-lead);
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+}
+
+.facts dt {
+  margin-bottom: 0.35rem;
+}
+
+.facts dd {
+  font-weight: 600;
+}
+
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portrait-col {
+    position: static;
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 520px) {
+  .facts {
+    grid-template-columns: 1fr;
+  }
+}

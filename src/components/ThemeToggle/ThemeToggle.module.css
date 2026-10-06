@@ -1,0 +1,26 @@
+.toggle {
+  width: 44px;
+  height: 44px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--glass);
+  backdrop-filter: blur(18px) saturate(1.5);
+  -webkit-backdrop-filter: blur(18px) saturate(1.5);
+  color: var(--text);
+  font-size: 1.15rem;
+  transition:
+    border-color var(--dur-fast) var(--ease-out),
+    background var(--dur-fast) var(--ease-out);
+}
+
+.toggle:hover {
+  border-color: var(--line-strong);
+  background: var(--surface-2);
+}
+
+.icon {
+  display: inline-grid;
+  place-items: center;
+}

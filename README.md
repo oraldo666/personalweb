@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# Orald Hysaj — Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Personal site of Orald (Aldo) Hysaj, Senior Frontend & Mobile Developer. Live at
+[aldo666.netlify.app](https://aldo666.netlify.app).
 
-## Available Scripts
+A single-page, fully static portfolio: no backend, no database, no tracking. Content is plain
+TypeScript data, so updating the CV never means touching a component.
 
-In the project directory, you can run:
+## Stack
 
-### `npm start`
+| Layer     | Choice                                                                       |
+| --------- | ---------------------------------------------------------------------------- |
+| Framework | React 19 + TypeScript (strict)                                               |
+| Build     | Vite 8                                                                       |
+| Motion    | [`motion`](https://motion.dev) (scroll reveals, shared layout, springs)      |
+| Styling   | CSS Modules on a token-based design system, dark + light themes              |
+| Fonts     | Self-hosted variable fonts via Fontsource: Fraunces, Manrope, JetBrains Mono |
+| Icons     | react-icons                                                                  |
+| Quality   | ESLint 10 (typescript-eslint, react-hooks, react-refresh), Prettier          |
+| Hosting   | Netlify (`netlify.toml`), publish dir `dist`                                 |
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Scripts
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+npm install
+npm run dev        # http://localhost:5173
+npm run build      # tsc -b && vite build  -> dist/
+npm run preview    # serve the production build
+npm run lint       # eslint .
+npm run typecheck  # tsc -b --noEmit
+npm run format     # prettier --write .
+```
 
-### `npm test`
+Requires Node 22.12+ (Netlify builds on Node 24, pinned in `netlify.toml`).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Editing content
 
-### `npm run build`
+Everything shown on the page lives in `src/data/`:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| File            | What it holds                                                                                 |
+| --------------- | --------------------------------------------------------------------------------------------- |
+| `profile.ts`    | Name, title, tagline, bio paragraphs, location, email, WhatsApp, socials, stats               |
+| `experience.ts` | Work history. Dates are `YYYY-MM`; `end: null` + `current: false` renders the start date only |
+| `projects.ts`   | Case studies for the Work section (`art` picks the cover illustration, `size` the bento slot) |
+| `skills.ts`     | Skill groups and their chips                                                                  |
+| `education.ts`  | Degrees and languages                                                                         |
+| `stack.ts`      | Icons on the hero orbit and labels in the marquee                                             |
+| `nav.ts`        | Section ids and labels                                                                        |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Types for all of the above are in `src/types.ts`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Static assets (CV PDF, portrait, favicons, Open Graph image) live in `public/`. Replace
+`public/Orald-Hysaj-CV.pdf` to update the downloadable CV.
 
-### `npm run eject`
+## Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+index.html              entry, meta tags, pre-paint theme script
+src/
+  main.tsx              fonts, global styles, React root
+  App.tsx               page composition
+  styles/               tokens.css (design tokens, both themes), global.css
+  data/                 all content
+  types.ts              shared data types
+  lib/                  theme helpers, motion variants, formatters
+  hooks/                useTheme, useScrollSpy, useMediaQuery, useIsTouch, useLockBodyScroll
+  components/           Nav, MobileMenu, Cursor, Orbit, Marquee, Reveal, Button, ProjectCard, ...
+  sections/             Hero, About, Experience, Work, Skills, Education, Contact
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Accessibility and motion
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Semantic landmarks, skip link, visible focus rings, keyboard-operable menu and modals.
+- `prefers-reduced-motion` disables the marquee, orbit, custom cursor and transform animations
+  (`<MotionConfig reducedMotion="user">`); content remains fully visible.
+- Theme follows the OS until the visitor picks one; the choice is stored in `localStorage` and
+  applied before first paint to avoid a flash.

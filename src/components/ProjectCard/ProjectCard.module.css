@@ -1,0 +1,166 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  overflow: hidden;
+  cursor: pointer;
+  transition:
+    border-color var(--dur) var(--ease-out),
+    transform var(--dur) var(--ease-out),
+    box-shadow var(--dur) var(--ease-out);
+}
+
+.card:hover {
+  border-color: var(--line-strong);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card:focus-within {
+  border-color: var(--accent);
+}
+
+.cover {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--surface-2), var(--surface));
+  border-bottom: 1px solid var(--line);
+}
+
+.cover svg {
+  transition: transform 1s var(--ease-out);
+}
+
+.card:hover .cover svg {
+  transform: scale(1.05);
+}
+
+.body {
+  padding: 1.5rem;
+  display: grid;
+  gap: 0.7rem;
+  align-content: start;
+}
+
+.meta {
+  font-size: 0.7rem;
+}
+
+.title {
+  font-size: clamp(1.35rem, 2vw, 1.75rem);
+}
+
+.summary {
+  color: var(--text-muted);
+  font-size: var(--fs-small);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.25rem;
+}
+
+.open {
+  margin-top: 0.5rem;
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 700;
+  font-size: var(--fs-small);
+  color: var(--accent-text);
+}
+
+.open svg {
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+
+.card:hover .open svg {
+  transform: translate(2px, -2px);
+}
+
+/* Bento sizes */
+.wide {
+  grid-column: span 4;
+}
+
+.tall {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.tall .cover {
+  aspect-ratio: auto;
+  flex: 1;
+  min-height: 240px;
+}
+
+.half {
+  grid-column: span 2;
+}
+
+.banner {
+  grid-column: span 6;
+  flex-direction: row;
+}
+
+.banner .cover {
+  aspect-ratio: auto;
+  width: 38%;
+  flex: none;
+  border-bottom: 0;
+  border-right: 1px solid var(--line);
+}
+
+.banner .body {
+  flex: 1;
+  padding: 2rem;
+}
+
+@media (max-width: 960px) {
+  .wide,
+  .half {
+    grid-column: span 3;
+  }
+
+  .tall {
+    grid-column: span 3;
+    grid-row: auto;
+  }
+
+  .tall .cover {
+    aspect-ratio: 16 / 9;
+    flex: none;
+    min-height: 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .wide,
+  .half,
+  .tall,
+  .banner {
+    grid-column: 1 / -1;
+  }
+
+  .banner {
+    flex-direction: column;
+  }
+
+  .banner .cover {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .banner .body {
+    padding: 1.5rem;
+  }
+}
