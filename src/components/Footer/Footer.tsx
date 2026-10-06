@@ -16,7 +16,7 @@ export default function Footer() {
           <span className={s.muted}>{profile.location}</span>
         </div>
         <p className={s.muted}>
-          Designed and built by {profile.name}. React 19, Vite and motion. Static, no backend.
+          Designed and built by {profile.name} with React 19, TypeScript and motion.
         </p>
         <div className={s.right}>
           <span className={s.muted}>© {year}</span>

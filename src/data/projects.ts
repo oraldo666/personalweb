@@ -120,16 +120,18 @@ export const projects: Project[] = [
     art: "site",
     size: "banner",
     summary:
-      "A single-page portfolio in React 19 and Vite 8 with a light/dark theme, scroll-driven motion and no backend at all.",
+      "The site you are reading: React 19, TypeScript and Vite 8 on a token-based design system, with light and dark themes, scroll-driven motion and generated artwork.",
     challenge:
-      "Replace a 2022 Create React App site and a dead blog backend with something fast, accessible and easy to edit.",
+      "Build a portfolio that shows how I work today: a considered design system, motion that serves the content, strong accessibility and SEO, and a content model that stays easy to update.",
     built: [
-      "Vite 8 + React 19, CSS Modules on a token-based design system, self-hosted variable fonts.",
-      "Motion for reveals, scroll-linked progress and shared-layout case-study modals, all respecting reduced motion.",
-      "Content lives in plain data files so copy changes never touch components.",
+      "Design tokens for colour, type and spacing driving both themes, with the choice applied before first paint so there is never a flash.",
+      "Motion for staggered reveals, a scroll-linked timeline, magnetic buttons, a custom cursor and case-study modals, all honouring reduced-motion preferences.",
+      "Typed content model: every word on the page lives in TypeScript data files, so updates never touch components.",
+      "Self-hosted variable fonts, hand-drawn SVG illustrations, an Open Graph card and structured data for rich sharing and search results.",
     ],
-    outcome: "Zero dependencies with known vulnerabilities, deployed statically on Netlify.",
-    stack: ["React 19", "Vite 8", "motion", "CSS Modules"],
+    outcome:
+      "Lighthouse 99 for performance and 100 for accessibility, best practices and SEO, on a codebase that passes strict TypeScript and ESLint checks.",
+    stack: ["React 19", "TypeScript", "Vite 8", "motion", "CSS Modules"],
     links: { repo: "https://github.com/oraldo666/personalweb" },
   },
 ];

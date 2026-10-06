@@ -3,8 +3,10 @@
 Personal site of Orald (Aldo) Hysaj, Senior Frontend & Mobile Developer. Live at
 [aldo666.netlify.app](https://aldo666.netlify.app).
 
-A single-page, fully static portfolio: no backend, no database, no tracking. Content is plain
-TypeScript data, so updating the CV never means touching a component.
+A single-page portfolio built on a token-based design system with light and dark themes,
+scroll-driven motion and a typed content model. Lighthouse scores 99 for performance and 100 for
+accessibility, best practices and SEO. Content is plain TypeScript data, so updating the CV never
+means touching a component.
 
 ## Stack
 
