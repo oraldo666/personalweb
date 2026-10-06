@@ -74,7 +74,10 @@ export interface Highlight {
 
 export interface Job extends Period {
   id: string;
+  /** Displayed in place of the employer name when the real name is under NDA. */
   company: string;
+  /** True when the employer's name is withheld under NDA. */
+  nda?: boolean;
   role: string;
   location: string;
   remote: boolean;
@@ -89,7 +92,10 @@ export type CardSize = "wide" | "tall" | "half" | "banner";
 export interface Project {
   slug: string;
   title: string;
+  /** Client label; a generic description when the client is under NDA. */
   client: string;
+  /** True when the client's name is withheld under NDA. */
+  nda?: boolean;
   place: string;
   period: string;
   role: string;

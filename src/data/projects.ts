@@ -64,9 +64,10 @@ export const projects: Project[] = [
     stack: ["React Native", "React", "Sumsub KYC", "i18n"],
   },
   {
-    slug: "queen3",
+    slug: "media-platform",
     title: "Creator streaming platform",
-    client: "Queen 3 Productions",
+    client: "Media client",
+    nda: true,
     place: "New York, USA",
     period: "2023",
     role: "Software Developer",

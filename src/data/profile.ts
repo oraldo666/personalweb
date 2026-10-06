@@ -17,7 +17,7 @@ export const profile: Profile = {
     "I build secure, fast web and mobile products for marketplaces, fintech and media teams, from Stripe checkouts and KYC flows to the interfaces people use every day.",
   summary:
     "Frontend and mobile engineer with 4+ years building production apps in React, Next.js, TypeScript and React Native, across marketplaces, fintech/crypto and media. Strong focus on performance, payments, real-time features and production reliability.",
-  location: "Berat, Albania",
+  location: "Tirana, Albania",
   availability: "Open to remote roles",
   careerStart: "2022-07-01",
   email: "orald.hysaj@hotmail.com",
@@ -52,12 +52,12 @@ export const profile: Profile = {
     },
   ],
   about: [
-    "I'm a frontend and mobile engineer from Berat, Albania. Over the last four years I've shipped production apps for remote teams in Rovereto, Vilnius, New York and London: a five-language used-bike marketplace, a crypto exchange, a digital-content streaming platform and data tools for the maritime industry.",
+    "I'm a frontend and mobile engineer from Tirana, Albania. Over the last four years I've shipped production apps for remote teams in Rovereto, Vilnius, New York and London: a five-language used-bike marketplace, a crypto exchange, a digital-content streaming platform and data tools for the maritime industry.",
     "My route in was unusual. I studied law at the University of Tirana and was partway through a master's in criminal law when I started teaching myself Python in 2021. Django came first, then JavaScript, React and React Native. The legal training never left: it shows up as real care for compliance, privacy and security, from KYC onboarding and Stripe checkout flows to fraud-triggered login challenges.",
     "Today I'm the main frontend contributor on BikeFlip, owning features end to end from Figma to Playwright tests. I care about performance you can measure, payments and real-time features that never fail silently, and the unglamorous details, like theming and internationalisation, done properly.",
   ],
   facts: [
-    { label: "Based in", value: "Berat, Albania" },
+    { label: "Based in", value: "Tirana, Albania" },
     { label: "Currently", value: "Software Frontend Developer at BikeFlip (remote)" },
     { label: "Languages", value: "Albanian (native), English (C1)" },
     { label: "Availability", value: "Open to remote roles" },

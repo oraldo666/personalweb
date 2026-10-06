@@ -31,7 +31,13 @@ export default function ProjectCard({ project, onOpen }: ProjectCardProps) {
       </div>
       <div className={s.body}>
         <p className={cx("mono", s.meta)}>
-          {project.client} · {project.period}
+          {project.client}
+          {project.nda && (
+            <span className={s.nda} title="Client name withheld under a non-disclosure agreement">
+              NDA
+            </span>
+          )}{" "}
+          · {project.period}
         </p>
         <h3 id={`project-${project.slug}-card-title`} className={s.title}>
           {project.title}

@@ -104,7 +104,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                 </div>
                 <div>
                   <dt className="mono">Client</dt>
-                  <dd>{project.client}</dd>
+                  <dd>{project.nda ? "Name withheld under NDA" : project.client}</dd>
                 </div>
               </dl>
 

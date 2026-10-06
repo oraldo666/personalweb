@@ -94,8 +94,9 @@ export const experience: Job[] = [
     stack: ["React Native", "React", "Sumsub KYC", "i18n", "Fintech"],
   },
   {
-    id: "queen3",
-    company: "Queen 3 Productions",
+    id: "media-platform",
+    company: "Digital content platform",
+    nda: true,
     role: "Software Developer",
     location: "New York, USA",
     remote: true,

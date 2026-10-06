@@ -28,7 +28,7 @@ export const scaleIn: Variants = {
 };
 
 export const lineReveal: Variants = {
-  hidden: { y: "112%" },
+  hidden: { y: "150%" },
   show: (delay: number = 0) => ({ y: 0, transition: { duration: 1, ease: EASE, delay } }),
 };
 

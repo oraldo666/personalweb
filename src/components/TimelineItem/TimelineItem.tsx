@@ -29,6 +29,14 @@ export default function TimelineItem({ job }: { job: Job }) {
           </p>
           <h3 id={`${job.id}-company`} className={s.company}>
             {job.company}
+            {job.nda && (
+              <span
+                className={s.nda}
+                title="Employer name withheld under a non-disclosure agreement"
+              >
+                NDA
+              </span>
+            )}
           </h3>
           <p className={s.role}>
             {job.role} · {job.location}

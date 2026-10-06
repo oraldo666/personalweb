@@ -100,8 +100,9 @@
 .line {
   display: block;
   overflow: hidden;
-  padding-bottom: 0.08em;
-  margin-bottom: -0.08em;
+  /* Room for Fraunces ascenders and the y/j descenders; negative margins keep the leading tight. */
+  padding: 0.12em 0.1em 0.36em;
+  margin: -0.12em -0.1em -0.36em;
 }
 
 .word {
