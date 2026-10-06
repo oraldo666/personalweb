@@ -1,0 +1,8 @@
+.logo {
+  color: var(--text);
+  flex: none;
+}
+
+.accent {
+  fill: var(--accent);
+}

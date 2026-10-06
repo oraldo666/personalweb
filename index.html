@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Orald Hysaj — Web & Mobile Developer</title>
+    <meta
+      name="description"
+      content="Orald (Aldo) Hysaj is a web and mobile developer building secure, fast products for fintech, streaming and marketplace teams with React, React Native, Next.js and Node.js."
+    />
+    <link rel="canonical" href="https://aldo666.netlify.app/" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#0b0b0e" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Orald Hysaj" />
+    <meta property="og:url" content="https://aldo666.netlify.app/" />
+    <meta property="og:title" content="Orald Hysaj — Web & Mobile Developer" />
+    <meta
+      property="og:description"
+      content="Secure, fast web and mobile products for fintech, streaming and marketplace teams. React, React Native, Next.js, Node.js."
+    />
+    <meta property="og:image" content="https://aldo666.netlify.app/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Orald Hysaj — Web & Mobile Developer" />
+    <meta
+      name="twitter:description"
+      content="Secure, fast web and mobile products for fintech, streaming and marketplace teams. React, React Native, Next.js, Node.js."
+    />
+    <meta name="twitter:image" content="https://aldo666.netlify.app/og.png" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Orald Hysaj",
+        "alternateName": ["Aldo", "Oraldo Hysaj"],
+        "url": "https://aldo666.netlify.app/",
+        "image": "https://aldo666.netlify.app/portrait.jpg",
+        "jobTitle": "Web & Mobile Developer",
+        "email": "mailto:orald.hysaj@hotmail.com",
+        "address": { "@type": "PostalAddress", "addressLocality": "Berat", "addressCountry": "AL" },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Tirana, Faculty of Law"
+        },
+        "knowsAbout": [
+          "React",
+          "React Native",
+          "Next.js",
+          "Node.js",
+          "Python",
+          "Django",
+          "Fintech",
+          "KYC"
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/in/oraldo-hysaj/",
+          "https://github.com/oraldo666",
+          "https://www.youtube.com/channel/UCasOkv1YjzwLLEzwX3yjd2g",
+          "https://www.facebook.com/oraldo.hysaj/"
+        ]
+      }
+    </script>
+
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          if (t !== "light" && t !== "dark") {
+            t = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+          }
+          document.documentElement.dataset.theme = t;
+          var m = document.querySelector('meta[name="theme-color"]');
+          if (m) m.content = t === "light" ? "#f6f2ea" : "#0b0b0e";
+        } catch (e) {
+          /* no-op */
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

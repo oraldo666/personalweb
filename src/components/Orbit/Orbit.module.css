@@ -1,0 +1,135 @@
+.scene {
+  perspective: 1200px;
+  width: 100%;
+  aspect-ratio: 1;
+  --spin: 80s;
+}
+
+.orbit {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.glow {
+  position: absolute;
+  inset: 20%;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent-glow), transparent 68%);
+  filter: blur(28px);
+}
+
+.core {
+  position: absolute;
+  inset: 38%;
+  border-radius: 50%;
+  border: 1px solid var(--line-strong);
+  background: radial-gradient(circle at 35% 35%, var(--surface-2), var(--bg));
+  display: grid;
+  place-items: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.core-dot {
+  width: 22%;
+  height: 22%;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 40px var(--accent);
+}
+
+.ring-inner {
+  position: absolute;
+  inset: 20%;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+}
+
+.satellite {
+  position: absolute;
+  inset: 20%;
+  border-radius: 50%;
+  animation: spin 26s linear infinite reverse;
+}
+
+.satellite span {
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  margin-left: -5px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 18px var(--accent);
+}
+
+.ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px dashed var(--line-strong);
+  container-type: inline-size;
+  animation: spin var(--spin) linear infinite;
+}
+
+.item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform: rotate(var(--a)) translateX(50cqw) rotate(calc(-1 * var(--a)));
+}
+
+.icon {
+  position: absolute;
+  top: -24px;
+  left: -24px;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--glass-strong);
+  border: 1px solid var(--line-strong);
+  color: var(--text);
+  font-size: 1.3rem;
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: spin var(--spin) linear infinite reverse;
+  transition:
+    border-color var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out),
+    scale var(--dur-fast) var(--ease-out);
+}
+
+.icon:hover {
+  border-color: var(--accent);
+  color: var(--accent-text);
+  scale: 1.14;
+}
+
+.scene:hover .ring,
+.scene:hover .icon,
+.scene:hover .satellite {
+  animation-play-state: paused;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .icon {
+    width: 38px;
+    height: 38px;
+    top: -19px;
+    left: -19px;
+    font-size: 1.05rem;
+  }
+}

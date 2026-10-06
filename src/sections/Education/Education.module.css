@@ -1,0 +1,97 @@
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(2.5rem, 6vw, 6rem);
+  align-items: start;
+}
+
+.cards {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.degrees {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.degree {
+  display: grid;
+  gap: 0.45rem;
+  padding: 1.5rem;
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+
+.degree-title {
+  font-size: 1.5rem;
+}
+
+.school {
+  font-weight: 600;
+}
+
+.place {
+  color: var(--text-muted);
+  font-size: var(--fs-small);
+}
+
+.languages {
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: var(--r-lg);
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--surface), var(--surface-2));
+}
+
+.lang-title {
+  font-size: 1.35rem;
+}
+
+.lang-list {
+  display: grid;
+  gap: 1.1rem;
+}
+
+.lang-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.lang-name {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.lang-detail {
+  color: var(--text-muted);
+  font-size: var(--fs-small);
+  margin-top: 0.2rem;
+}
+
+.cefr {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+}
+
+.cefr li {
+  display: grid;
+  gap: 0.25rem;
+  padding: 0.65rem 0.75rem;
+  border-radius: var(--r-sm);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  font-weight: 700;
+}
+
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

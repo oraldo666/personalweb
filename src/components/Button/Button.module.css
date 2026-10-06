@@ -1,0 +1,70 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  border-radius: var(--r-pill);
+  font-weight: 700;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  transition:
+    background var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out),
+    box-shadow var(--dur-fast) var(--ease-out),
+    filter var(--dur-fast) var(--ease-out);
+}
+
+.md {
+  padding: 0.95rem 1.5rem;
+  font-size: 0.95rem;
+}
+
+.sm {
+  padding: 0.65rem 1.1rem;
+  font-size: 0.875rem;
+}
+
+.primary {
+  background: var(--accent);
+  color: var(--accent-ink);
+  box-shadow: 0 14px 34px -14px var(--accent-glow);
+}
+
+.primary:hover {
+  filter: brightness(1.06);
+  box-shadow: 0 18px 40px -14px var(--accent-glow);
+}
+
+.ghost {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--line-strong);
+}
+
+.ghost:hover {
+  border-color: var(--text);
+  background: var(--surface);
+}
+
+.solid {
+  background: var(--text);
+  color: var(--bg);
+}
+
+.solid:hover {
+  filter: brightness(1.08);
+}
+
+.icon {
+  display: inline-flex;
+  font-size: 1.05em;
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+
+.btn:hover .icon {
+  transform: translate(2px, -2px);
+}
+
+.btn:hover .icon[data-dir="down"] {
+  transform: translateY(2px);
+}

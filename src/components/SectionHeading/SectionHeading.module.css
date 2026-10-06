@@ -1,0 +1,37 @@
+.heading {
+  display: grid;
+  gap: 1.1rem;
+  max-width: 44rem;
+}
+
+.center {
+  margin-inline: auto;
+  text-align: center;
+  justify-items: center;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.index {
+  color: var(--accent-text);
+}
+
+.dash {
+  width: 2rem;
+  height: 1px;
+  background: var(--line-strong);
+}
+
+.title {
+  color: var(--text);
+}
+
+.extra {
+  color: var(--text-muted);
+  font-size: var(--fs-lead);
+  line-height: 1.55;
+}
