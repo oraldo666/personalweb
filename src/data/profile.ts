@@ -65,7 +65,7 @@ export const profile: Profile = {
   stats: [
     { id: "years", label: "Years shipping production apps", suffix: "+" },
     { id: "companies", value: 4, label: "Companies, all remote" },
-    { id: "locales", value: 5, label: "Locales live on BikeFlip" },
+    { id: "payments", value: 3, label: "Payment flows in production" },
     { id: "countries", value: 4, label: "Countries worked with" },
   ],
 };
